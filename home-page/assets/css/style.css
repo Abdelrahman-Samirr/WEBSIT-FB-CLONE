@@ -37,8 +37,9 @@ img {
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, .1);
-  position: fixed;
+  position: sticky;
   z-index: 100;
+  top: 0;
 }
 
 .nav .container {
@@ -175,7 +176,7 @@ img {
 /* main **********************************/
 .Main {
   background-color: #f2f4f7;
-  padding-top: 6.24rem;
+
 }
 
 /* hero ///////////////////////// */
@@ -187,6 +188,10 @@ img {
 /* heroleft  ******************************** */
 .hero__left {
   width: 22%;
+  position: sticky;
+  top: 8.5%;
+  align-self: flex-start;
+
 }
 
 .hero__left__components {
@@ -227,8 +232,9 @@ img {
   position: absolute;
   height: 0.1rem;
   background: #d7dade;
-  width: 20%;
-  bottom: 26.5%;
+  width: 98%;
+  bottom: 0;
+  overflow-y: auto;
 }
 
 /* hero center //////////////////// */
@@ -447,7 +453,7 @@ img {
   color: #65676b;
   font-weight: bold;
   cursor: pointer;
-  padding: 1rem 7rem;
+  padding: 2% 12%;
   border-radius: 1.5rem;
 }
 
@@ -652,7 +658,7 @@ img {
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   overflow-y: hidden;
-  
+
 }
 
 .modal-comments {
@@ -662,7 +668,7 @@ img {
   border-top-right-radius: 1rem;
   max-height: 60vh;
   overflow-y: auto;
-  
+
 }
 
 .comment-container {
@@ -737,6 +743,9 @@ img {
 .hero__right {
   width: 20%;
   padding-top: 2rem;
+  position: sticky;
+  top: 8.5%;
+  align-self: flex-start;
 }
 
 .hero__right h2 {
@@ -764,7 +773,7 @@ img {
 
 /* chat bot  */
 
-.chat-bot{
+.chat-bot {
   display: none;
   width: 18%;
   background-color: #fff;
@@ -773,18 +782,20 @@ img {
   bottom: 0;
   right: 10%;
 }
-.chat-ai{
+
+.chat-ai {
   width: 18%;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  border-top-left-radius:1rem ;
-  border-top-right-radius:1rem ;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   position: fixed;
   bottom: 0;
   right: 10%;
   cursor: pointer;
 }
+
 .chat-header {
   display: flex;
   justify-content: space-between;
@@ -792,8 +803,8 @@ img {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  border-top-left-radius:1rem ;
-  border-top-right-radius:1rem ;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .chat-body {
@@ -804,16 +815,20 @@ img {
 
 .message {
   margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   background-color: #b1b1b13e;
   border-radius: 1rem;
+  font-size: 14px;
 }
 
 .chat-message {
   margin-right: 6rem;
 }
-.my-message{
-  margin-left: 12rem;
+
+.my-message {
+  margin-left: 8rem;
+  background-color: #1c79f3f6;
+  color: #fff;
 }
 
 .chat-footer {
@@ -861,57 +876,91 @@ img {
     flex-wrap: nowrap;
     gap: 1rem;
   }
-
-  .nav__center,
-  .nav__right,
-  .hero__left,
-  .hero__center,
-  .posts {
-    flex: 1;
-    min-width: 0;
-    /* Allow shrinking */
-  }
-
-  .nav__center a {
-    padding: 0 0.5rem;
-    font-size: 0.9rem;
+  .searchBar div img{
+    width: 2rem;
+    padding-top: 0.2rem;
   }
 
   .searchBar input {
-    width: 100%;
-    margin-left: 1rem;
-    font-size: 0.9rem;
+    margin-left: 2.5rem;
+  }
+  .nav__center {
+    margin-right: 3rem;
+  }
+  .nav__center a{
+    height: 65%;
+    width: 18%;
+  }
+  .nav__center a img{
+    width: 70%;
   }
 
+  .hero__left {
+    width: 26%;
+  }
+
+  .hero__center {
+    width: 49%;
+  }
+
+  .hero__right {
+    width: 22%;
+  }
+  
+  .header__item {
+    padding: 0.3rem 0.7rem;
+
+  }
+  .header__item span{
+    font-size: 1.4rem;
+  }
+
+
   .post-actions button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .form-Comment input {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .modal-card {
     width: 90%;
   }
+  .chat-bot, .chat-ai{
+    right: 1%;
+    width: 26%;
+  }
 }
 
 
 @media (max-width: 430px) {
-
+  .nav__left,
+  .nav__right,
   .hero__left,
   .hero__right {
     display: none;
   }
 
-  .hero .container {
-    justify-content: center;
+  .header__item span{
+    font-size: 1.2rem;
+  }
+  .hero__center {
+    width: 100%;
   }
 
-  .hero__center {
-    flex: 1;
-    max-width: 100%;
+  .nav__center {
+    margin: 0 auto;
+    padding: 0.5rem 0;
+  }
+  .hero__center header{
+    margin-top: 0.5rem;
+  }
+  .like-count, .comment-count{
+    font-size: 1rem;
+  }
+  .profile-name{
+    font-size: 1.4rem;
   }
 }
