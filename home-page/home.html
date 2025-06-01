@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Facebook</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__left">
+        <a class="logo" href="#"><img src="assets/images/environmentalism.png" alt="Facebook icon" /></a>
+        <div class="searchBar">
+          <div><img src="assets/images/search.png" alt="search icon" /></div>
+          <input class="search" type="text" placeholder="Search Facebook" />
+        </div>
+      </div>
+      <div class="nav__center">
+        <a href="#"><img src="assets/images/home.png" alt="home icon" /></a>
+        <a href="#"><img src="assets/images/video.png" alt="video icon" /></a>
+        <a href="#"><img src="assets/images/marketplace.png" alt="marketplace icon" /></a>
+        <a href="#"><img src="assets/images/people.png" alt="groups icon" /></a>
+        <a href="#"><img src="assets/images/joystick.png" alt="gaming icon" /></a>
+      </div>
+      <div class="nav__right">
+        <a href="#"><img src="assets/images/dots-menu.png" alt="menu icon" /></a>
+        <a class="chat-btn" href="#"><img src="assets/images/messenger.png" alt="messenger icon" /></a>
+        <a href="#"><img src="assets/images/notification.png" alt="notification icon" /></a>
+        <a href="#">
+          <img class="profile"
+            src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-1/382842330_6650041148410078_7184250711875773847_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=yzRs7AGX2aUQ7kNvwE0K81r&_nc_oc=AdlYILTqRJ3pbGwzS9Qq6DQbXYOh1hbbqqCQix1oSBDGZtFzHbhCGLuLboj2mQQscKQ&_nc_zt=24&_nc_ht=scontent.fcai19-8.fna&_nc_gid=9iGU9gB54u9UHjDVZXuwMw&oh=00_AfJiexBoL61gKkWmnx6taSfxDeRnaKg75bU2QDZWobMIEA&oe=6830FE3E"
+            alt="profile icon" />
+          <img class="arrow" src="assets/images/down-arrow.png" alt="arrow" />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main class="Main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__left">
+          <div class="hero__left__components">
+            <div class="upload-container">
+              <label for="profile-file-upload" class="upload-label">
+                <span> Upload your profile picture</span>
+                <input type="file" id="profile-file-upload" accept="image/*" hidden>
+              </label>
+            </div>
+            <a href="#">
+              <img src="assets/images/download.jpeg" alt="meta ai icon" />
+              <p>Meta AI</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/friends.png" alt="Friends icon" />
+              <p>Friends</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/history.png" alt="memories icon" />
+              <p>Memories</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/save-instagram.png" alt="saved icon" />
+              <p>Saved</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/groups.png" alt="Groups icon" />
+              <p>Groups</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/facebook (1).png" alt="video icon" />
+              <p>Video</p>
+            </a>
+            <a href="#">
+              <img src="assets/images/shop.png" alt="marketplace icon" />
+              <p>Marketplace</p>
+            </a>
+            <a href="#">
+              <img class="arrow" src="assets/images/down-arrow.png" alt="profile icon" />
+              <p>See more</p>
+            </a>
+          </div>
+          <div class="shortcuts"></div>
+        </div>
+        <div class="hero__center">
+          <header>
+            <div class="header__post">
+              <a href="#"><img class="profile" src="" alt="profile icon" /></a>
+              <div class="header__post__btn">
+                <span></span>
+              </div>
+            </div>
+            <div class="header__items">
+              <div class="header__item">
+                <img src="assets/images/live.png" alt="live video icon">
+                <span>Live Video</span>
+              </div>
+              <div class="header__item post-btn-modal">
+                <img src="assets/images/image.png" alt="photo&video icon">
+                <span>Photo/video</span>
+              </div>
+              <div class="header__item">
+                <img src="assets/images/happy-face.png" alt="feeling icon">
+                <span>Feeling/activity</span>
+              </div>
+            </div>
+          </header>
+          <div class="post-overlay">
+            <div class="modal-post">
+              <div class="modal-post__header">
+                <h2>Create post</h2>
+                <div class="cancel-icon delete-icon">
+                  <img src="assets/images/delete.png" alt="esc icon">
+                </div>
+              </div>
+              <div class="user-info">
+                <img class="profile" src="" alt="Profile icon" />
+                <h4 class="profile-name">Abdelrahman Samir</h4>
+              </div>
+              <textarea class="post-input" placeholder=""></textarea>
+              <div class="lower-part">
+                <div class="actions">
+                  <span>Add to your post</span>
+                  <label class="header__item post-pic-btn" for="post-pic-input">
+                    <img src="assets/images/image.png" alt="photo&video icon">
+                    <span>Photo/video</span>
+                    <input type="file" id="post-pic-input" hidden>
+                  </label>
+                </div>
+                <button class="post-btn">Post</button>
+              </div>
+            </div>
+          </div>
+          <div class="posts">
+          </div>
+          <div class="modal">
+            <div class="modal-card">
+              <div class="modal-comments">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__right">
+          <h2>Users</h2>
+          <div class="users">
+          </div>
+          <div class="chat-ai"><p>Chat with Ai</p></div>
+          <div class="chat-bot">
+            <div class="chat-header">
+              <p>Chat with Ai</p>
+              <div class="esc-chat delete-icon">
+                <img src="assets/images/delete.png" alt="esc icon">
+              </div>
+            </div>
+            <div class="chat-body">
+            </div>
+            <div class="chat-footer">
+              <input class="chatInput" type="text" placeholder="Type a message...">
+              <a href="#">></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script defer src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+  <script defer type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>
