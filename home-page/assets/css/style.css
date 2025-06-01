@@ -203,12 +203,16 @@ img {
 }
 
 .upload-container {
-  background-color: #d3d3d3;
+  background-color: #dedbdb6e;
   padding: 1rem;
   border-radius: 1rem;
   cursor: pointer;
 }
-
+.upload-label{
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
 .hero__left__components a {
   display: flex;
   align-items: center;
@@ -754,9 +758,19 @@ margin-bottom: 0.5rem;
   top: 8.5%;
   align-self: flex-start;
 }
-
-.hero__right h2 {
+.user-logout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 1rem;
+}
+.logout-btn{
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #d01414d3;
+  color: #fff;
+  cursor: pointer;
 }
 
 .users {

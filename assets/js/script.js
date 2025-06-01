@@ -1,4 +1,9 @@
-// trying
+const token = localStorage.getItem("token")
+if(token){
+    window.location.href = "/home-page/home.html"
+}
+
+
 const fName = document.querySelector('.fname')
 const sName = document.querySelector('.sname')
 
@@ -103,8 +108,8 @@ loginForm.addEventListener("submit", async (e) => {
         return
     }
 
-    const fullName = fName.value + " " + sName.value;
-    localStorage.setItem("profileName", fullName);
+    // const fullName = fName.value + " " + sName.value;
+    // localStorage.setItem("profileName", fullName);
 
     const loginData = {
         "email": loginInput.value,

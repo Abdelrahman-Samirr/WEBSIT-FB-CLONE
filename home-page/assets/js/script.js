@@ -1,18 +1,23 @@
-
-console.log(window)
 const token = localStorage.getItem("token")
+
+if(!token){
+  window.location.href = "/index.html"
+}
+
+
 console.log(token)
 const decoded = jwtDecode(token);
 
 console.log(decoded);
 
 
-const storedName = localStorage.getItem("profileName");
-const profileName = document.querySelector('.profile-name');
 
-if (storedName && profileName) {
-  profileName.textContent = storedName;
-}
+// const storedName = localStorage.getItem("profileName");
+// const profileName = document.querySelector('.profile-name');
+
+// if (storedName && profileName) {
+//   profileName.textContent = storedName;
+// }
 ////////////////////////////////////////////////////////
 
 const openPost = document.querySelector('.header__post__btn')
@@ -34,6 +39,7 @@ const userNameElement = document.querySelector('.profile-name')
 const openChatBtn = document.querySelector('.chat-btn')
 const chatCard = document.querySelector('.chat-bot')
 const escChat = document.querySelector('.esc-chat')
+const logoutBtn = document.querySelector('.logout-btn')
 
 const DEFAULT_IMG = `https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png`
 
@@ -631,5 +637,12 @@ async function updateProfile(path) {
     console.error("Error to upload assets:", error);
   }
 }
+
+// logout 
+
+logoutBtn.addEventListener('click',function(){
+  localStorage.removeItem("token")
+  window.location.href = "/index.html"
+})
 
 
