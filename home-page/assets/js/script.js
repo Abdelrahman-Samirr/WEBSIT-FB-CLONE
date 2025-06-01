@@ -128,14 +128,14 @@ sendButton.addEventListener("click", async function (e) {
 
   chatBody.insertAdjacentHTML(
     "beforeend",
-    `<div class="message my-message">${userInput}</div>`
+    `<p class="message my-message">${userInput}</p>`
   );
 
   chatBotInput.value = "";
 
   chatBody.insertAdjacentHTML(
     "beforeend",
-    `<div class="message chat-message">Typing...</div>`
+    `<p class="message chat-message">Typing...</p>`
   );
 
   const botReply = await generateResponse(userInput);
