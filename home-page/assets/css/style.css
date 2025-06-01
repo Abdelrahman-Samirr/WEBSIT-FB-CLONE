@@ -426,7 +426,7 @@ img {
 }
 
 .post-content {
-  margin: 1.5rem 0;
+  margin: 0.8rem 0;
 
 }
 
@@ -696,7 +696,10 @@ img {
   font-size: 1.4rem;
   line-height: 1.4;
 }
-
+.comment-item .user-name{
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
 .form-Comment {
   display: flex;
   align-items: center;
