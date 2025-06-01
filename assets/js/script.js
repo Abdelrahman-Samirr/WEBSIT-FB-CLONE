@@ -27,6 +27,8 @@ passwordIcon.addEventListener('click', function () {
 })
 
 // register part 
+const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/;
+
 const createAccBtn = document.querySelector('.new-account__btn')
 const registerPage = document.querySelector('.register-page')
 const newEmail = document.querySelector('.new-email')
@@ -44,6 +46,15 @@ createAccBtn.addEventListener('click', function (e) {
 
 registerForm.addEventListener('submit', async (e) => {
     e.preventDefault()
+
+    if (!regex.test(newEmail.value) || !fName.value) {
+        alert("Invalid input. Please enter a valid email or First Name ")
+        fName.value = '';
+        sName.value = '';
+        newEmail.value = '';
+        newPassword.value = '';
+        return
+    }
 
     const registerData = {
         "name": fName.value + " " + sName.value,
@@ -80,12 +91,16 @@ registerForm.addEventListener('submit', async (e) => {
 // login part ///
 const loginInput = document.querySelector(".login__email")
 const loginPage = document.querySelector('.login-page')
+
+
 loginForm.addEventListener("submit", async (e) => {
     e.preventDefault()
 
-    const regex = /^(?:\d+|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
     if (!regex.test(loginInput.value)) {
-        alert("Invalid input. Please enter a valid email or number")
+        alert("Invalid input. Please enter a valid email or password")
+        loginInput.value = ''
+        password.value = ''
+        return
     }
 
     const fullName = fName.value + " " + sName.value;
@@ -109,7 +124,7 @@ loginForm.addEventListener("submit", async (e) => {
         const data = await response.json()
         console.log("email login:", data);
 
-        localStorage.setItem("token",data.token)
+        localStorage.setItem("token", data.token)
 
 
         window.location.href = "/home-page/home.html"
